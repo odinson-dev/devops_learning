@@ -3,17 +3,17 @@
   become: yes
   tasks:
   - name: Install Nginx
-    apt:
+    yum:
       name: nginx
       state: present
       update_cache: yes
-    when: ansible_os_family == "Debian"
+    when: ansible_os_family == "RedHat"
 
   - name: Copy index.html
     copy:
       src: ../web_application/
       dest: /var/www/html/
-      owner: www-data
-      group: www-data
+      owner: nginx
+      group: nginx
       mode: '0644'
       recursive: yes
