@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Choubey's Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            background-color: #333;
+            padding: 1rem 0;
+            color: white;
+            text-align: center;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 2rem;
+            background-color: #f8f8f8;
+        }
+
+        .hero .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero .hero-content button {
+        padding: 0.5rem 1rem;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        text-align: center;
+        text-decoration: none; /* This is to remove the underline from the link */
+        display: inline-block; /* This makes the link behave like a button */
+        margin-right: 10px; /* Optional: to provide some spacing between the buttons */
+    }
+
+        
+
+    /* Additional styles for when the user hovers over the button */
+    .button:hover {
+        background-color: #555;
+    }
+
+
+        .hero .hero-image img {
+            max-width: 200px;
+            border-radius: 50%;
+        }
+
+        .header img {
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 20px; /* Center the image and add some space below */
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #666;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        p, li {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .contact-info {
+            margin-bottom: 20px;
+        }
+
+       /* Timeline Bar */
+.timeline {
+    position: relative;
+    padding-left: 40px; /* Increase padding to give space for the bullet */
+}
+
+/* Timeline Main Line */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #e9ecef;
+    top: 0;
+    bottom: 0;
+    left: 20px; /* Adjust as necessary for your layout */
+}
+
+/* Timeline Event (Item) */
+.timeline-item {
+    position: relative;
+    margin-left: 40px; /* Increase left margin to accommodate bullets */
+    padding-left: 30px; /* Space for the text */
+    margin-bottom: 15px; /* Space between items */
+}
+
+/* Company Name Bullet */
+.timeline-item::before {
+    content: '•'; /* Bullet character */
+    font-size: 4em; /* Adjust bullet size */
+    position: absolute;
+    left: -35px; /* Adjust left position so the bullet appears beside the vertical line */
+    top: -16px; /* Adjust top position to align it with the text */
+    line-height: 1; /* Adjust line height to control vertical alignment */
+    color: #333; /* Bullet color */
+}
+
+/* Event Details (List Items) */
+ul.timeline-details {
+    list-style: disc; /* Standard bullet points for the items */
+    padding-left: 40px; /* Space for the bullets to align with the text */
+    margin: 0; /* Remove default margin */
+}
+
+/* Adjust individual list items if needed */
+ul.timeline-details li {
+    position: relative;
+    margin-left: 0px; /* Align bullets with the timeline content */
+    padding-left: 0px; /* No additional padding needed */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm Nikhil Choubey</h1>
+                <p>Lead Software Engineer | Gurgaon</p>
+                <div class="button-group"> 
+                    <button onclick="location.href='mailto:nchoubey.afgji@gmail.com'">Contact Me</button>
+                    
+                    <a href="Nikhil_Choubey.pdf" download="Nikhil_Choubey_Resume.pdf" class="button">Download Resume</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="profile-pic.jpg" alt="Nikhil Choubey">
+            </div>
+        </section>
+
+        <section id="summary">
+            <h2>Summary</h2>
+            <p>With a robust seven-year tenure as a tech lead, I have engineered scalable and robust solutions across diverse industries, including E-Commerce, Pharma, University Admissions, 3D Development, and Market Intelligence.</p>
+            <!-- More content here -->
+        </section>
+        <div class="section">
+            <h2>Education</h2>
+            <p><strong>National Institute of Technology Goa</strong>, M.Tech in Computer Science, Jul. 2014 – Jul. 2016</p>
+            <p><strong>College of Engineering Roorkee</strong>, B.Tech in Computer Science, Aug. 2010 – Jul. 2014</p>
+        </div>
+
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><b>Languages:</b> Python, Java, NodeJS, ReactJS</li>
+                <li><b>Developer Tools:</b> VS Code, IntelliJ, AWS, Terraform</li>
+                <li><b>Technologies/Frameworks:</b> Linux, Ansible, Kubernetes, GitHub, JUnit, WordPress</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Convrse AI - Technology Lead</h3>
+                    <p>Oct 2022 - Present</p>
+                    <ul class="timeline-details">
+                        <li>Designed a microservice-based architecture, enhancing product development and deployment efficiency.</li>
+                        <li>Developed user authentication using OAuth2.0 in Java, and services for file management and notifications in NodeJS.</li>
+                        <li>Optimized backend processes using Python FastAPI and AWS SQS for the asynchronous optimization of heavy 3D files.</li>
+                        <li>Lead the engineering team in the development and maintenance of services and new feature integrations.</li>
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h3>Tracxn Technologies Ltd - Technology Lead</h3>
+                    <p> Nov 2020 – Oct 2022</p>
+                    <ul class="timeline-details">
+                        <li>Engineered a robust HTTP requests framework, enhancing inter-service security through OAuth and token rotation.</li>
+                        <li>Led the design of a port scanning system for instance monitoring, integrating AWS and GCP pub/sub.</li>
+                        <li>Developed Jobsystems for streamlined management of Kafka and SQS consumers.</li>
+                    </ul>
+                </div>
+    
+                
+    
+                <div class="timeline-item">
+                    <h3>Hatcher - Technology Lead</strong></h3>
+                    <p> Dec 2018 – Oct 2020</p>
+                    <ul class="timeline-details">
+                        <li>Launched a versatile MVP for an e-commerce chatbot, enhancing customer engagement.</li>
+                        <li>Implemented CI/CD pipelines using GitHub and pm2, leading frontend development initiatives.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Silversparrow -  Deep Learning Engineer</h3>
+                    <p>May 2018 – Nov 2018</p>
+                    <ul class="timeline-details">
+                        <li>Developed custom data annotation utilities for advanced video and image processing tasks.</li>
+                        <li>Designed and trained a deep learning model for precise brand recognition in visual content.</li>
+                    </ul>
+                </div>
+    
+                <div class="timeline-item">
+                    <h3>Greenclouds- Software Developer</h3>
+                    <p>Feb 2017 – Apr 2018</p>
+                    <ul class="timeline-details">
+                        <li>Developed features for a mailer system including a rule engine and scheduling capabilities.</li>
+                        <li>Created a bulk admit card generation module, significantly reducing manual effort.</li>
+                    </ul>
+                </div>
+    
+                <div class="timeline-item">
+                    <h3>Innoplexus - Junior Software Developer</h3>
+                    <p>Jun 2016 – Sep 2016</p>
+                    <ul class="timeline-details">
+                        <li>Spearheaded data migration to Neo4J and engineered algorithms for graph data analytics.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="section">
+            <h2>Projects</h2>
+            <div>
+                <p><strong>IAM using OAuth 2.0 (Java, Spring Boot, AWS EKS)</strong> - August 2023</p>
+                <ul>
+                    <li>Developed an IAM-like application for creating users, roles, and assigning permissions.</li>
+                    <li>Implemented a system for creating new root users, similar to AWS IAM, facilitating better access control.</li>
+                </ul>
+            </div>
+
+            <div>
+                <p><strong>In Memory SQS (Java)</strong> - October 2022</p>
+                <ul>
+                    <li>Created an in-memory SQS allowing topic creation and subscriber management to ensure message uniqueness across subscribers.</li>
+                </ul>
+            </div>
+
+            <div>
+                <p><strong>WordPress Site</strong> - October 2023</p>
+                <ul>
+                    <li>Hosted a WordPress website on AWS EC2, showcasing a customized theme to enhance site layout.</li>
+                </ul>
+            </div>
+
+            <!-- Additional projects can be added in a similar fashion -->
+        </div>
+        <div class="footer">
+            <p>Connect with me on <a href="https://linkedin.com/nikhil-choubey-72a820b9/">LinkedIn</a> | View my projects on <a href="https://github.com/odinson-dev">GitHub</a></p>
+        </div>
+    </div>
+</body>
+</html>
+

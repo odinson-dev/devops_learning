@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Choubey - Lead Software Engineer</title>
+    <style>
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            padding: 1rem 0;
+            color: white;
+            text-align: center;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 2rem;
+            background-color: #f8f8f8;
+        }
+
+        .hero .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero .hero-content button {
+            padding: 0.5rem 1rem;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .hero .hero-image img {
+            max-width: 200px;
+            border-radius: 50%;
+        }
+
+        .timeline {
+        padding: 1rem 0;
+    }
+
+    .timeline-item {
+        background-color: #f0f0f0;
+        border-left: 4px solid #333;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+    }
+
+    #education ul, #technical-profile ul {
+        background-color: #f0f0f0;
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .timeline {
+        position: relative;
+        padding-left: 20px;
+        list-style: none;
+    }
+
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        background-color: #e9ecef;
+        top: 0;
+        bottom: 0;
+        left: 18px; /* Adjust this if needed to align with the timeline dots */
+    }
+
+    .timeline-item {
+        margin: 10px 0;
+        padding-left: 40px;
+        position: relative;
+        background: #ffffff;
+        border-radius: 4px;
+        padding: 10px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -9px; /* Center the dot horizontally on the timeline */
+        top: 15px;
+        height: 18px;
+        width: 18px;
+        border: 3px solid #e9ecef;
+        border-radius: 50%;
+        background-color: #ffffff;
+        z-index: 1;
+    }
+
+    /* Style for technical profile */
+    #technical-profile ul {
+        column-count: 2; /* Creates a two-column layout for skills */
+        column-gap: 20px;
+    }
+
+    #technical-profile ul li {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 1rem 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Placeholder for navigation; replace with actual links -->
+            <ul>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#work-history">Work History</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Nikhil Choubey</h1>
+            <p>Lead Software Engineer | Gurgaon</p>
+            <button onclick="location.href='mailto:nchoubey.afgji@gmail.com'">Contact Me</button>
+        </div>
+        <div class="hero-image">
+            <img src="profile-pic.jpg" alt="Nikhil Choubey">
+        </div>
+    </section>
+    <section id="summary">
+        <h2>Summary</h2>
+        <p>With a robust seven-year tenure as a tech lead, I have engineered scalable and robust solutions across diverse industries, including E-Commerce, Pharma, University Admissions, 3D Development, and Market Intelligence.</p>
+        <!-- More content here -->
+    </section>
+    <section id="work-history">
+        <h2>Work History</h2>
+        <div class="timeline">
+            <!-- Repeat this block for each job -->
+            <div class="timeline-item">
+                <h3>Convrse AI - Technology Lead</h3>
+                <p>Oct 2022 - Present</p>
+                <ul>
+                    <li>Detail 1</li>
+                    <li>Detail 2</li>
+                    <!-- More details -->
+                </ul>
+            </div>
+            <!-- Add other positions in a similar manner -->
+        </div>
+    </section>
+    
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li>NIT Goa, M.Tech in Computer Science, 2014 - 2016</li>
+            <li>COER, B.Tech in Computer Science, 2010 - 2014</li>
+            <!-- Add other educational qualifications as needed -->
+        </ul>
+    </section>
+    
+    <section id="technical-profile">
+        <h2>Technical Profile</h2>
+        <ul>
+            <li>Java</li>
+            <li>NodeJS</li>
+            <!-- Add other technical skills -->
+        </ul>
+    </section>
+    <footer>
+        <!-- Footer content -->
+    </footer>
+</body>
+</html>
