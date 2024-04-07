@@ -1,3 +1,5 @@
 #!/bin/bash
-apt-get update && apt-get install -y ansible
-ansible-pull -U <your_ansible_playbook_repository_url> webserver-setup.yml
+apt-get update && apt-get install -y ansible git
+git clone https://github.com/odinson-dev/devops_learning.git
+cd devops_learning/ansible
+ansible-playbook playbook.yml
