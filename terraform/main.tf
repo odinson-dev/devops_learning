@@ -21,6 +21,14 @@ module "vpc" {
   availability_zones = ["us-east1a"]
 }
 
+module "ssm_endpoints" {
+  source = "./ssm"
+  vpc_id = module.vpc.vpc_id
+  subnet_ids = module.vpc.private_subnet_id
+  ssm_sg_id = module.vpc.ssm_sg_id
+  aws_region = "us-east-1"
+}
+
 module "ssm_iam" {
   source = "./iam/iam_role"
 }
