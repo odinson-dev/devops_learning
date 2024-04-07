@@ -9,7 +9,7 @@ resource "aws_cloudwatch_metric_alarm" "scale_in_alarm" {
   threshold                 = "30"
   alarm_description         = "This alarm triggers scale in when CPU drops below 30%"
   actions_enabled           = true
-  alarm_actions             = [var.scalin_policy_arn]
+  alarm_actions             = [var.scaleout_policy_arn]
   dimensions = {
     AutoScalingGroupName = var.autoscaling_group_name
   }

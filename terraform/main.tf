@@ -66,11 +66,6 @@ module "scaleout_policy" {
   autoscaling_group_name = module.autoscaling.autoscaling_group_name
 }
 
-module "scalein_policy" {
-  source = "./autoscaling/scalein_policy"
-  autoscaling_group_name = module.autoscaling.autoscaling_group_name
-
-}
 
 module "aws_sns_topic" {
   source = "./sns"
@@ -83,13 +78,13 @@ module "cloudwatch_monitoring" {
 
 module "cloudwatch_scaleout_policy" {
   source = "./autoscaling/cloudwatch_scalein"
-  scalin_policy_arn = module.scaleout_policy.scale_out_arn
+  scaleout_policy_arn = module.scaleout_policy.scale_out_arn
   autoscaling_group_name = module.autoscaling.autoscaling_group_name
 }
 
 module "cloudwatch_scalein_policy" {
   source = "./autoscaling/cloudwatch_scaleout"
-  scaleout_policy_arn = module.scalein_policy.scale_in_arn
+  scaleout_policy_arn = module.scaleout_policy.scale_out_arn
   autoscaling_group_name = module.autoscaling.autoscaling_group_name
 }
 

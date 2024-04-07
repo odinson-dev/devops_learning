@@ -4,6 +4,6 @@ variable "autoscaling_group_name" {
 }
 
 
-variable "scalin_policy_arn" {
+variable "scaleout_policy_arn" {
   type = string
 }
