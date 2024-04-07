@@ -5,7 +5,6 @@ resource "aws_vpc" "main" {
   tags = {
     Name = "MyVPC"
   }
-  # Other VPC configuration
 }
 
 module "subnets" {
@@ -19,7 +18,6 @@ module "security_groups" {
   source = "./security_groups"
 
   vpc_id              = aws_vpc.main.id
-  # Other variables needed by the security groups module
 }
 
 output "vpc_id" {

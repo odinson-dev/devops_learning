@@ -4,12 +4,12 @@ variable "launch_template_id" {
 }
 
 variable "private_subnet_id" {
-    type = string
+    type = set(string)
   
 }
 
 variable "public_subnet_id" {
-    type = string
+    type = set(string)
   
 }
 

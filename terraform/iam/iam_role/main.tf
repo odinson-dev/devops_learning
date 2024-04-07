@@ -22,6 +22,6 @@ resource "aws_iam_role_policy_attachment" "ssm_attach" {
 }
 
 
-output "iam_instance_profile" {
-  value = aws_iam_role.ssm_role.arn
+output "iam_role" {
+  value = aws_iam_role.ssm_role.name
 }

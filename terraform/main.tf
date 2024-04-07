@@ -22,23 +22,31 @@ module "vpc" {
 }
 
 module "ssm_iam" {
-  source = "./iam"
+  source = "./iam/iam_role"
+}
+
+module "ssm_instance_profile" {
+  source = "./iam/iam_instance_profile"
+  iam_role = module.ssm_iam.iam_role
+}
+
+module "ami" {
+  source = "./autoscaling/ami"
 }
 
 
 module "launch_template" {
   source = "./autoscaling/launch_templates"
   instance_sg_id = module.vpc.instance_sg_id
-  iam_instance_profile = module.ssm_iam.iam_instance_profile
+  iam_instance_profile = module.ssm_instance_profile.iam_instance_profile
   vpc_id = module.vpc.vpc_id
+  ami_id = module.ami.ami_id
 
-  # Parameters for the launch template such as AMI ID, instance type, key name, etc.
 }
 
 module "autoscaling" {
   source = "./autoscaling/asg"
 
-  # Ensure that the launch template ID is referenced here.
   launch_template_id = module.launch_template.launch_template_id
   target_group_arn = module.launch_template.my_tg
   private_subnet_id = module.vpc.private_subnet_id
@@ -54,7 +62,6 @@ module "scalein_policy" {
   source = "./autoscaling/scalein_policy"
   autoscaling_group_name = module.autoscaling.autoscaling_group_name
 
-  # Additional parameters for the scale in policy
 }
 
 module "aws_sns_topic" {
@@ -63,7 +70,6 @@ module "aws_sns_topic" {
 module "cloudwatch_monitoring" {
   source = "./cloudwatch"
   aws_sns_topic = module.aws_sns_topic.sns_topic_arn
-  # Inputs dependent on your autoscaling configuration
   autoscaling_group_name = module.autoscaling.autoscaling_group_name
 }
 
@@ -71,16 +77,12 @@ module "cloudwatch_scaleout_policy" {
   source = "./autoscaling/cloudwatch_scalein"
   scalin_policy_arn = module.scaleout_policy.scale_out_arn
   autoscaling_group_name = module.autoscaling.autoscaling_group_name
-
-  # Additional parameters for the scale out policy
 }
 
 module "cloudwatch_scalein_policy" {
   source = "./autoscaling/cloudwatch_scaleout"
   scaleout_policy_arn = module.scalein_policy.scale_in_arn
   autoscaling_group_name = module.autoscaling.autoscaling_group_name
-
-  # Additional parameters for the scale in policy
 }
 
 

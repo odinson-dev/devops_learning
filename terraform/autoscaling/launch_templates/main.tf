@@ -1,6 +1,6 @@
 resource "aws_launch_template" "my_launch_template" {
   name_prefix   = "web-app-"
-  image_id      = "ami-123456" # Replace with the latest AWS AMI ID for your region
+  image_id      = var.ami_id
   instance_type = "t2.micro"
 
   block_device_mappings {
