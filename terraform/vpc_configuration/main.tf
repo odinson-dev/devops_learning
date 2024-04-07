@@ -40,3 +40,7 @@ output "lb_sg_id" {
 output "instance_sg_id" {
   value = module.security_groups.instance_sg_id
 }
+
+output "ssm_sg_id" {
+  value = module.security_groups.ssm_sg_id
+}
